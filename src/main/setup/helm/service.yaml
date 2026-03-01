@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: paperless-frontend
+  labels:
+    app: paperless-frontend
+spec:
+  selector:
+    app: paperless-frontend
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80

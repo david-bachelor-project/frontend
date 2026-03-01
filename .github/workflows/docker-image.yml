@@ -17,10 +17,10 @@ jobs:
 
     - name: Build Docker image
       run: |
-        IMAGE=ghcr.io/${{ github.repository_owner }}/frontend:${{ github.sha }}
+        IMAGE=ghcr.io/${{ github.repository_owner }}/frontend:latest
         docker build -t $IMAGE .
 
     - name: Push Docker image
       run: |
-        IMAGE=ghcr.io/${{ github.repository_owner }}/frontend:${{ github.sha }}
+        IMAGE=ghcr.io/${{ github.repository_owner }}/frontend:latest
         docker push $IMAGE

@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: paperless-frontend
+  labels:
+    app: paperless-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: paperless-frontend
+  template:
+    metadata:
+      labels:
+        app: paperless-frontend
+    spec:
+      imagePullSecrets:
+        - name: ghcr-creds
+      containers:
+        - name: frontend
+          image: ghcr.io/david-bachelor-project/frontend:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80

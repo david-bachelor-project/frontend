@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://paperless-rest.your-domain.com'
+ // apiUrl: 'http://paperless-backend.paperless.svc.cluster.local:8083'
+    apiUrl: 'http://backend.local.meow'
 };
